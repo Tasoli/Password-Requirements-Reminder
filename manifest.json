@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Password Requirements Reminder",
+  "description": "Reminds you what password requirements were imposed by the current website.",
+  "version": "0.1",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.chase.com/*", "http://*.chase.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "contextMenus", 
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
