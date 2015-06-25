@@ -9,7 +9,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*.chase.com/*", "http://*.chase.com/*"],
+      "matches": ["https://*.chase.com/*", 
+      "http://*.chase.com/*",
+      "https://*.live.com/*", 
+      "http://*.live.com/*",
+      "https://*.t-mobile.com/*", 
+      "http://*.t-mobile.com/*"],
       "js": ["content.js"],
       "run_at": "document_end"
     }
